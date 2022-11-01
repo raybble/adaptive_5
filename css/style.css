@@ -1,0 +1,413 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+.body{
+  font-family: Montserrat;
+  font-weight: 400;
+  color: #005BBB;
+}
+.header{
+  position: relative;
+}
+.logo{
+  width: 68px;
+  height: 59px;
+  display: block;
+  margin: 80px auto 0 auto;
+}
+.menu-list{
+  display: flex;
+  justify-content: space-between;
+  max-width: 404px;
+  list-style-type: none;
+  margin: 80px auto 80px auto;
+}
+.menu-link{
+  font-family: Montserrat;
+  font-size: 20px;
+  text-decoration: none;
+  color: #005BBB;
+}
+.menu-link:hover{
+  text-decoration: underline;
+}
+.menu-icon,
+.close-icon {
+  display: none;
+  border: 0;
+  background: none;
+  padding: 0;
+}
+.text-intro{
+  font-family: Montserrat;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-size: 28px;
+  color: #005BBB;
+  line-height: 40px;
+}
+.second{
+  padding: 20px 0 20px 0;
+}
+
+.heading{
+  font-family: Montserrat;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 900;
+  color: #005BBB;
+  line-height: 48px;
+}
+.heading:before{
+  content: "";
+  border-top: 1px solid #005BBB;
+  display: block;
+  max-width: 1024px;
+  margin: 80px auto 16px auto;
+}
+.heading:after{
+  content: "";
+  max-width: 500px;
+  height: 1px;
+  background: #005BBB;
+  display: block;
+  margin: 16px auto 40px auto;
+}
+.cards{
+  display: flex;
+  max-width: 1024px;
+  margin: 0 auto 80px;
+  justify-content: space-between;
+}
+.box{
+  flex: 0 0 500px;
+  background-color: #005BBB;
+  border-left: 10px solid #FFD500;
+  font-family: Montserrat;
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  transition: background-color 0.3s ease 0s;
+}
+.box:hover{
+  background-color: #0063CC;
+}
+.bold{
+  font-size: 48px;
+}
+.contact{
+  margin: 96px auto 56px auto;
+}
+.form{
+  border: 1px solid #005BBB;
+  max-width: 1024px;
+  margin: 0 auto 80px;
+  padding: 30px;
+  display: flex;
+}
+.textarea{
+  border: none;
+  flex-grow: 1;
+  color: #005BBB;
+  outline: none;
+  padding: 19px 0 0;
+  resize: none;
+}
+::placeholder{
+  color: #005BBB;
+  opacity: 0.5;
+  font-size: 18px;
+  line-height: 22px;
+}
+.button{
+  font-family: Montserrat;
+  border: 0;
+  color: #FFFFFF;
+  font-size: 28px;
+  line-height: 34px;
+  padding: 13px 56px;
+  letter-spacing: 0.06em;
+  background: #005BBB;
+  margin: 0 0 0 30px;
+}
+.button:hover{
+  background-color: #0063CC;
+}
+.gallery{
+  max-width: 1352px;
+  margin: 0 auto 80px;
+}
+.slick-slide{
+  border: solid #FFFFFF;
+  border-width: 0 20px;
+  position: relative;
+}
+.slick-slide img{
+  width: 100%;
+}
+.slick-slide:before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 91, 187, 0.1), rgba(0, 91, 187, 0.1));
+  border-left-width: 10px;
+  border-left-style: solid;
+  border-image: linear-gradient(to bottom, #005BBB 50%, #FFD500 50%) 1 1;
+  border-image: linear-gradient(to bottom, #005BBB 50%, #FFD500 50%) 1 1;
+}
+.slick-dots{
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 0;
+}
+.slick-dots button{
+  width: 20px;
+  height: 20px;
+  margin: 0 8px;
+  border: 1px solid #005BBB;
+  border-radius: 50%;
+  font-size: 0;
+  padding: 0;
+  background: none;
+}
+.slick-dots .slick-active button{
+  background: #005BBB;
+}
+@media (max-width: 1024px) {
+  .wrapper{
+    padding-top: 188px;
+  }
+  .menu{
+    display: none;
+  }
+  .header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 48px 60px 0;
+    z-index: 100;
+  }
+  .logo{
+    text-align: left;
+    margin: 0 0 120px;
+  }
+  .menu-icon,
+  .close-icon{
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 60px;
+  }
+  .close-icon{
+    display: none;
+  }
+  .menu-open.header{
+    background: #005BBB;
+  }
+  .menu-open .logo svg * {
+    fill: #FFFFFF;
+  }
+  .menu-open .menu-icon {
+    display: none;
+  }
+  .menu-open .close-icon {
+    display: block;
+  }
+  .menu-open .menu{
+    display: block;
+    text-align: left;
+    padding: 0 0 72px;
+    margin: 0;
+  }
+  .menu-open .menu-list{
+    color: #FFFFFF;
+    display: block;
+    margin: 0 0 48px;
+  }
+}
+@media only screen
+and (max-width: 1199px) {
+  .wrapper{
+    padding: 48px 60px 0;
+  }
+  .gallery{
+    padding-top: 80px;
+    margin: 0 -20px 80px;
+  }
+  .cards{
+    display: block;
+  }
+  .box{
+    margin: 0 0 28px;
+  }
+  .text-intro{
+    font-size: 24px;
+  }
+  .heading{
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+@media only screen
+and (max-width: 900px) {
+  .gallery{
+    padding-top: 80px;
+  }
+  .menu-link{
+    color: #FFFFFF;
+  }
+  .intro{
+    margin-bottom: 48px;
+  }
+  .text-intro{
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .second{
+    padding: 15px 0 15px 0;
+  }
+  .cards{
+    margin-bottom: 48px;
+  }
+  .heading{
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .bold{
+    display: block;
+    font-size: 24px;
+  }
+  .box-text{
+    font-size: 16px;
+  }
+  .heading:after{
+    max-width: unset;
+    left: 0;
+    margin: 16px 0 40px 0;
+  }
+  .form{
+    margin-bottom: 100px;
+    display: block;
+    position: relative;
+    padding: 20px;
+  }
+  .textarea{
+    width: 100%;
+    height: 110px;
+    text-align: center;
+    padding: 0;
+  }
+  .button{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -80px;
+    margin: 0;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper{
+    padding: 0 20px;
+  }
+  .gallery{
+    padding-top: 0;
+    margin-bottom: 48px;
+  }
+  .slick-slide{
+    border: 0;
+  }
+  .slick-dots{
+    margin-top: 24px;
+  }
+  .slick-dots button{
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  }
+  .header{
+    padding: 20px 20px 0;
+  }
+  .menu-open.header{
+    min-height: 100vh;
+    position: fixed;
+  }
+  .menu-icon svg * {
+    fill: #FFFFFF;
+  }
+  .logo{
+    display: none;
+  }
+  .menu-open .logo{
+    display: block;
+    margin-bottom: 48px;
+  }
+  .menu-open .logo svg {
+    width: 54px;
+    height: 47px;
+  }
+  .menu-icon,
+  .close-icon{
+    top: 20px;
+    right: 20px;
+  }
+  .intro{
+    margin-bottom: 48px;
+  }
+  .text-intro{
+  font-size: 16px;
+  line-height: 22px;
+  }
+  .second{
+    padding: 10px 0 10px 0;
+  }
+  .heading:before{
+  content: "";
+  margin: 48px auto 16px auto;
+  }
+  .heading:after{
+    content: "";
+    margin: 16px auto 40px auto;
+  }
+  .box{
+    padding: 30px;
+  }
+
+}
